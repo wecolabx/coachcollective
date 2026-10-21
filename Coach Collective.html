@@ -1,0 +1,296 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Coach Collective</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="An invitation from Co.labx to ten practitioners for a four-month peer programme. Applications close 1 Nov.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: dark stage, section titles break thin coral frames, labels stack like stickers
+   (coral, pale, teal tilted). Giant grotesque titles alternate white and coral letters. */
+:root{
+  --bg:#141414; --fg:#FFFFFF; --muted:#BDBDBD; --coral:#E8453C; --teal:#1A6B6B;
+  --pale:#E9E9E9; --ink:#141414; --soft:#1E1E1E;
+  --font:'Hanken Grotesk','Helvetica Neue',Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:18px;line-height:1.5;font-weight:400;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+h1,h2,h3,p,ul{margin:0}
+ul{padding:0;list-style:none}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--fg);outline-offset:3px}
+.wrap{max-width:1120px;margin-inline:auto}
+.r,.hl{color:var(--coral)}
+
+/* pill nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);
+  margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));
+  padding:14px max(16px,env(safe-area-inset-right,0px)) 14px max(16px,env(safe-area-inset-left,0px))}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{font-weight:700;font-size:20px;text-decoration:none;letter-spacing:-.01em}
+.logo b{color:var(--coral)}
+.pills{display:none;gap:8px}
+.pill{display:inline-block;background:var(--pale);color:var(--ink);font-weight:600;font-size:15px;text-decoration:none;
+  padding:9px 20px;border-radius:999px;border:1.5px solid transparent;white-space:nowrap}
+.pill:hover{border-color:var(--coral)}
+.pill.cta{background:var(--coral);color:#fff}
+.pill.cta:hover{border-color:#fff}
+@media (min-width:860px){.pills{display:flex}}
+
+/* frames */
+.frame{--fp:clamp(26px,4vw,46px);position:relative;border:1.5px solid var(--coral);border-radius:28px;
+  padding:var(--fp) clamp(18px,4vw,56px) clamp(34px,5vw,64px);margin-block:clamp(54px,8vw,96px) 0}
+.frame>.ttl{display:table;max-width:calc(100% + 8px);margin:calc(-1 * var(--fp) - .5em) auto var(--fp);
+  background:var(--bg);padding:0 .22em;position:relative;text-align:center;
+  font-size:clamp(40px,9vw,112px);line-height:1;font-weight:500;letter-spacing:-.035em;text-wrap:balance}
+.frame>.ttl.sm{font-size:clamp(30px,6vw,68px)}
+.frame>.lbl{display:table;margin:calc(-1 * var(--fp) - .75em) auto var(--fp);background:var(--bg);padding:0 14px;
+  color:var(--coral);font-size:clamp(15px,2vw,19px);font-weight:500;text-align:center;position:relative}
+.center{text-align:center}
+.stack{display:grid;gap:16px;justify-items:center}
+.narrow{max-width:36em;margin-inline:auto}
+
+/* stickers */
+.tag{display:table;max-width:100%;padding:8px 20px;font-weight:500;font-size:clamp(18px,2.3vw,26px);line-height:1.25;text-align:center;text-decoration:none}
+.t-red{background:var(--coral);color:#fff}
+.t-pale{background:var(--pale);color:var(--coral)}
+.t-teal{background:var(--teal);color:#fff;transform:rotate(-2.2deg);padding:12px 40px;font-weight:600}
+.tag.sm{font-size:16px;padding:6px 16px}
+a.t-teal{transition:transform .2s ease}
+a.t-teal:hover{transform:rotate(0) scale(1.04)}
+.box{background:var(--pale);color:var(--ink);padding:14px 20px;font-size:17px;line-height:1.45;text-align:center;max-width:100%}
+.box.l{text-align:left}
+.box b{color:var(--coral);font-weight:600}
+.gap{margin-top:14px}
+
+/* grids */
+.grid{display:grid;gap:clamp(24px,3vw,40px)}
+.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.grid>*{min-width:0}
+.col-head{margin-bottom:14px}
+.cell{display:grid;gap:14px;justify-items:center;align-content:start}
+
+/* intro columns */
+.intro{margin-top:clamp(28px,4vw,48px);font-size:clamp(19px,2.2vw,24px);line-height:1.4}
+.big{font-size:clamp(30px,5.2vw,60px);line-height:1.08;font-weight:500;letter-spacing:-.03em;text-wrap:balance}
+
+/* timeline */
+.tl{display:grid;gap:12px;justify-items:center}
+.tl .step{display:grid;gap:8px;justify-items:center;margin-bottom:14px;max-width:100%}
+.tl .box{max-width:42em}
+
+/* hosts */
+.host{display:grid;gap:12px;justify-items:center;text-align:center}
+.avatar{width:min(210px,60%);aspect-ratio:1;border-radius:50%;background:#2A2A2A;display:grid;place-items:center;
+  font-size:76px;font-weight:500;color:var(--coral);letter-spacing:-.04em;border:1.5px solid #3A3A3A}
+
+footer{padding-block:48px 56px;text-align:center;color:var(--muted);font-size:15px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}a.t-teal{transition:none}}
+</style>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="logo" href="#top">Co.lab<b>x</b></a>
+    <div class="pills">
+      <a class="pill" href="#who">Who we are</a>
+      <a class="pill" href="#fit">Is this for you</a>
+      <a class="pill" href="#build">What you'll build</a>
+      <a class="pill" href="#plan">Game plan</a>
+      <a class="pill" href="#hosts">Hosts</a>
+    </div>
+    <a class="pill cta" href="#apply">Share your interest</a>
+  </div>
+</nav>
+
+<main id="top" class="wrap">
+
+  <!-- Hero -->
+  <section class="frame" style="margin-top:clamp(36px,5vw,64px)">
+    <p class="lbl">Co.labx community · Coach Collective</p>
+    <p class="center" style="font-size:clamp(20px,3vw,32px);font-weight:500;letter-spacing:-.01em;margin-bottom:10px">You've been holding the room.</p>
+    <h1 class="alt center" style="font-size:clamp(46px,11vw,150px);line-height:.95;font-weight:500;letter-spacing:-.045em;text-wrap:balance">Who's holding yours?</h1>
+    <div class="stack" style="margin-top:clamp(28px,4vw,48px)">
+      <span class="tag t-red">Applications close 1 Nov</span>
+      <span class="tag t-pale">10 practitioners · 4 months · Free programme</span>
+      <a class="tag t-teal" href="#apply">Share your interest</a>
+    </div>
+  </section>
+
+  <div class="grid g2 intro">
+    <p>You know the craft. Now you're ready to make it your whole practice, and you don't have to build it alone.</p>
+    <p>Join <span class="hl">nine other practitioners</span> for four months with a team that has your back. <span class="hl">Peer practice</span>, <span class="hl">open playbooks</span>, <span class="hl">paid co-facilitation</span> and <span class="hl">business mentorship</span>.</p>
+  </div>
+
+  <!-- The moment -->
+  <section class="frame">
+    <h2 class="ttl alt">You know the moment</h2>
+    <div class="stack narrow center" style="gap:22px">
+      <p class="big">A founder sees what they couldn't see before.</p>
+      <p style="font-size:clamp(19px,2.2vw,24px)">A team finally has the conversation it's been avoiding. <span class="hl">You make room for that.</span></p>
+      <p class="muted" style="color:var(--muted)">You already have what can't be taught in a weekend: presence, the instinct for the question that opens things up, the steadiness to stay when it gets uncomfortable.</p>
+    </div>
+  </section>
+
+  <div class="grid g2 intro" style="gap:clamp(24px,3vw,40px)">
+    <p>And yet, somewhere between doing the work and building a life around it, things get complicated. <span class="hl">Finding clients. Pricing your work.</span> And finding people who understand why any of this matters so much to you.</p>
+    <p>This is your life's work. Now you're ready to make it your whole practice. We know it's a different kind of journey, and you don't have to make it alone.</p>
+  </div>
+  <p class="big center" style="margin-top:clamp(36px,5vw,64px);max-width:16ch;margin-inline:auto">Every good player needs a <span class="r">team</span> around them.</p>
+
+  <!-- Who we are -->
+  <section class="frame" id="who">
+    <h2 class="ttl alt">Who we are</h2>
+    <div class="grid g2" style="align-items:start">
+      <div class="cell">
+        <span class="tag t-red">An unusual bet</span>
+        <p class="box">We know this work needs more people who can hold complexity and work with the human side of change. So we're investing in making our competition better.</p>
+      </div>
+      <div class="cell">
+        <span class="tag t-pale">200+ teams · 6 years</span>
+        <p class="box">Co.labx is a transformation practice. Over the last six years, we've worked with 200+ teams, using the lessons of sport to help purpose-driven organisations grow their people, their impact and their business. We'd like to open our playbooks and client work to a small circle of practitioners.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Is this for you -->
+  <section class="frame" id="fit">
+    <h2 class="ttl alt">Is this for you?</h2>
+    <p class="center" style="margin-bottom:26px;font-size:clamp(19px,2.2vw,24px)">This is an invitation for you if…</p>
+    <div class="stack">
+      <p class="tag t-red">You've already decided this matters. We see you.</p>
+      <p class="tag t-pale">You're about to go full-time on your own, or just have.</p>
+      <p class="tag t-red" style="max-width:34em">You have 3+ years of experience as a coach, facilitator, business coach, sports coach or systems practitioner, inside organisations or outside them.</p>
+      <p class="tag t-pale">You take the work seriously and yourself a little less so.</p>
+    </div>
+    <p class="center narrow" style="margin-top:30px;color:var(--muted)">You don't need everything figured out. Bring your experience, your questions, and the thing you've been wanting to try. We'll bring ours.</p>
+  </section>
+
+  <!-- The Collective -->
+  <section class="frame">
+    <h2 class="ttl alt">The Collective</h2>
+    <div class="stack center" style="gap:22px">
+      <p class="big" style="max-width:18ch">Ten practitioners. Four months.</p>
+      <p style="font-size:clamp(19px,2.2vw,24px)">A <span class="hl">regenerative community</span> where everyone gives and everyone grows.</p>
+      <div class="narrow" style="display:grid;gap:14px">
+        <p class="box">We're not selecting you. We're inviting you, and you decide whether you're ready to invest your time, presence and resources. Our criteria are open, so you can judge your own fit before you apply.</p>
+        <p class="box">Think of a community, not a class. A boardroom facilitator, a business coach and a sports coach each read the same moment differently, and that mix is the point.</p>
+      </div>
+      <div class="stack" style="gap:10px;margin-top:8px">
+        <span class="tag t-red sm">Boardroom facilitator</span><span class="tag t-pale sm">Business coach</span><span class="tag t-teal sm" style="padding:8px 22px">Sports coach</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- What you'll build -->
+  <section class="frame" id="build">
+    <h2 class="ttl alt sm">What you'll build</h2>
+    <p class="center narrow" style="margin-bottom:34px;font-size:clamp(19px,2.2vw,24px)">Your ambitions will be different. We want to make room for that.</p>
+    <div class="grid g2" style="align-items:start">
+      <div class="cell"><span class="tag t-red">Hone your craft</span><p class="box">Learn from our playbooks and your peers', and turn what you know into frameworks that are distinctly yours.</p></div>
+      <div class="cell"><span class="tag t-red">Run your business</span><p class="box">Your niche, offer, pricing and next clients, with business mentorship and paid co-facilitation on live engagements.</p></div>
+      <div class="cell"><span class="tag t-red">Your breakthrough, yours</span><p class="box">A first client, a new offering, a practice that finally feels sustainable. You choose it. Your practice and your clients stay yours.</p></div>
+      <div class="cell"><span class="tag t-red">A community to get you there</span><p class="box">Nine peers who'll challenge, refer and back you, in the huddle and on the field, well beyond the four months.</p></div>
+    </div>
+  </section>
+
+  <!-- Investing -->
+  <section class="frame">
+    <h2 class="ttl alt sm">What we're each investing</h2>
+    <div class="grid g2" style="align-items:start">
+      <div class="cell">
+        <span class="tag t-red">You're investing</span>
+        <p class="box"><b>Your time.</b> 3–4 hours a week for the community, plus 3–4 more if you co-facilitate on a client engagement.</p>
+        <p class="box"><b>Your craft.</b> Your experience, your questions, and the thing you've been wanting to try.</p>
+        <p class="box"><b>Your money.</b> The first in-person workshop is paid on actuals for facilities, lodging and food, about ₹10,000 per person. Travel is yours.</p>
+      </div>
+      <div class="cell">
+        <span class="tag t-teal" style="transform:rotate(1.6deg)">We're investing</span>
+        <p class="box"><b>Our experience, knowledge and craft.</b> Our playbooks and client work, opened to the circle.</p>
+        <p class="box"><b>Our time and money.</b> The programme itself is free, and we take no margin on the workshop.</p>
+      </div>
+    </div>
+    <div class="stack" style="margin-top:34px">
+      <span class="tag t-pale">Paid work</span>
+      <p class="box" style="max-width:36em">Around <b>₹10,000–20,000 per day</b> for co-facilitation, with travel and logistics covered. It isn't guaranteed.</p>
+    </div>
+  </section>
+
+  <!-- Win-win-win -->
+  <section class="frame">
+    <h2 class="ttl alt sm">The win-win-win</h2>
+    <div class="stack narrow center" style="gap:22px">
+      <p class="big">When one of us grows, we all do.</p>
+      <p class="box">You build a practice that sustains you. The organisations you serve get stronger. The ecosystem grows, and that includes us. We'll be honest about what we hope to gain: better ways of serving our clients, trusted collaborators, and a stronger field.</p>
+    </div>
+  </section>
+
+  <!-- Game plan -->
+  <section class="frame" id="plan">
+    <h2 class="ttl alt">The game plan</h2>
+    <p class="center narrow" style="margin-bottom:34px;font-size:clamp(19px,2.2vw,24px)">We don't have the whole thing designed, and that's intentional. The people who join will help shape what comes next.</p>
+    <div class="tl">
+      <div class="step"><span class="tag t-red">23 Oct – 1 Nov</span><p class="box"><b>Application window.</b> Applications open on 23 Oct and close on 1 Nov.</p></div>
+      <div class="step"><span class="tag t-red">2 – 11 Nov</span><p class="box">We read your application with care, and then we talk. Conversations happen in small groups, so you meet your potential peers and we work out together whether this is the right season for you.</p></div>
+      <div class="step"><span class="tag t-red">14 Nov</span><p class="box">The cohort is announced, with at least two weeks to plan before Bangalore.</p></div>
+      <div class="step"><span class="tag t-red">3 – 5 Dec</span><p class="box">Two and a half days together in Bangalore: craft, practice, community and play.</p><span class="tag t-teal sm">Tentative</span></div>
+      <div class="step"><span class="tag t-red">Week of 14 Dec</span><p class="box">First online huddle.</p></div>
+      <div class="step" style="margin-bottom:0"><span class="tag t-red">Dec – Mar</span><p class="box">Live projects and peer practice, alongside your own breakthrough.</p></div>
+    </div>
+  </section>
+
+  <!-- Applying -->
+  <section class="frame">
+    <h2 class="ttl alt sm">What applying looks like</h2>
+    <div class="stack narrow center" style="gap:20px">
+      <p class="big" style="font-size:clamp(26px,4.2vw,46px)">Think of it as the first conversation, <span class="r">not a test.</span></p>
+      <p class="box">The form takes 20–30 minutes and is designed to help you get clear on what you want to build, whether or not you join.</p>
+      <p class="box">After applications close on 1 Nov, we'll invite you into a conversation. It isn't an interview. It's a chance to meet others who may be in the room, ask us your questions, and decide together whether this is right for you.</p>
+      <span class="tag t-pale sm">Our criteria are open and listed above</span>
+    </div>
+  </section>
+
+  <!-- Hosts -->
+  <section class="frame" id="hosts">
+    <h2 class="ttl alt sm">Who's holding this with you</h2>
+    <p class="center narrow" style="margin-bottom:38px;font-size:clamp(19px,2.2vw,24px)">We'll be on the field with you, not coaching from the sidelines.</p>
+    <div class="grid g3" style="gap:44px 32px;align-items:start">
+      <div class="host"><div class="avatar" aria-hidden="true">A</div><span class="tag t-red">Arhan</span><p class="box">On a quest to design new organisation models for the 21st century, helping organisations shift from pyramids to networks and building long-term client relationships.</p></div>
+      <div class="host"><div class="avatar" aria-hidden="true">S</div><span class="tag t-red">Shruti</span><p class="box">Co-founder of Co.labx.</p></div>
+      <div class="host"><div class="avatar" aria-hidden="true">J</div><span class="tag t-red">Jayasudha</span><p class="box">Bringing a learner-experience and systems lens to facilitation, designing spaces that help people reflect deeply, shift their practice, and create meaningful change.</p></div>
+      <div class="host"><div class="avatar" aria-hidden="true">V</div><span class="tag t-red">Vimal</span><p class="box">A mechanical engineer who found his calling in teaching. He has helped 10,000+ young people take on public problems, and now partners with CXOs to grow their organisations.</p></div>
+      <div class="host"><div class="avatar" aria-hidden="true">S</div><span class="tag t-red">Saahil</span><p class="box">Co-founder of Co.labx.</p></div>
+      <div class="host"><div class="avatar" aria-hidden="true">M</div><span class="tag t-red">Monica</span><p class="box">Part of the Co.labx team.</p></div>
+    </div>
+  </section>
+
+  <!-- Closing -->
+  <section class="frame" id="apply" style="margin-bottom:clamp(40px,6vw,72px)">
+    <p class="lbl">Applications open 23 Oct · close 1 Nov</p>
+    <div class="stack center" style="gap:24px">
+      <h2 class="big alt" style="max-width:15ch;letter-spacing:-.04em">Make some space for you.</h2>
+      <p class="narrow" style="font-size:clamp(19px,2.2vw,24px)">You've held space for others. We'd love to make some space for you.</p>
+      <p class="box narrow">Tell us about the work that brings you alive, where you are in your journey, and what you'd love to build. You don't need the perfect answer. A good place to begin is with what you're curious about.</p>
+      <a class="tag t-teal" id="apply-link" href="#apply" style="margin-top:12px;font-size:clamp(20px,2.6vw,28px)">Share your interest</a>
+    </div>
+  </section>
+</main>
+
+<footer>Co.labx × Coach Collective</footer>
+
+<script>
+/* Alternate white and coral letters in titles; the plain text stays readable without script. */
+document.querySelectorAll('.alt').forEach(function(h){
+  var t=h.textContent.trim(),i=0;
+  h.setAttribute('aria-label',t);
+  h.innerHTML=Array.from(t).map(function(c){
+    if(c===' '||c==='\n')return ' ';
+    var cls=(i++%2)?' class="r"':'';
+    return '<span aria-hidden="true"'+cls+'>'+c+'</span>';
+  }).join('');
+});
+</script>
+
+</body></html>
