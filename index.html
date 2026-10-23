@@ -1,296 +1,413 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>Coach Collective</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="An invitation from Co.labx to ten practitioners for a four-month peer programme. Applications close 1 Nov.">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>An invitation to practitioners of transformation | Co.labx × The Coach Collective</title>
+<meta name="description" content="A circle of practitioners building what's next in transformation, together. An invitation from Co.labx.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700&display=swap">
+<script>document.documentElement.classList.add('js')</script>
 <style>
-/* Layout: dark stage, section titles break thin coral frames, labels stack like stickers
-   (coral, pale, teal tilted). Giant grotesque titles alternate white and coral letters. */
 :root{
-  --bg:#141414; --fg:#FFFFFF; --muted:#BDBDBD; --coral:#E8453C; --teal:#1A6B6B;
-  --pale:#E9E9E9; --ink:#141414; --soft:#1E1E1E;
-  --font:'Hanken Grotesk','Helvetica Neue',Arial,sans-serif;
-  color-scheme:dark;
+  --coral:#D63C2B; --coral-dark:#B5301F; --coral-light:#FF8A7A;
+  --ink:#141414; --grey:#4B4B4B; --tint:#FDEFEA; --line:#E9E2DE; --teal:#0F766E; --white:#fff;
+  --display:'Bricolage Grotesque','Figtree',system-ui,sans-serif;
+  --body:'Figtree',system-ui,sans-serif;
+  --r:18px; --warm:#FFF6F1;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:18px;line-height:1.5;font-weight:400;
-  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
-h1,h2,h3,p,ul{margin:0}
-ul{padding:0;list-style:none}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--fg);outline-offset:3px}
-.wrap{max-width:1120px;margin-inline:auto}
-.r,.hl{color:var(--coral)}
+html{color-scheme:light}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{font-family:var(--display);text-wrap:balance}
+a{color:var(--coral)}
+a:hover{color:var(--ink)}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+[hidden]{display:none!important}
+svg{display:block}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral)}
+.h2{font-size:clamp(30px,4vw,42px);font-weight:800;line-height:1.05;letter-spacing:-.025em}
+.lede{font-size:clamp(18px,2.2vw,21px);color:#2b2b2b;max-width:620px}
+.sec{padding-top:96px}
+.sec-head{display:flex;flex-direction:column;gap:12px;margin-bottom:32px}
 
-/* pill nav */
-.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);
-  margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));
-  padding:14px max(16px,env(safe-area-inset-right,0px)) 14px max(16px,env(safe-area-inset-left,0px))}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.logo{font-weight:700;font-size:20px;text-decoration:none;letter-spacing:-.01em}
-.logo b{color:var(--coral)}
-.pills{display:none;gap:8px}
-.pill{display:inline-block;background:var(--pale);color:var(--ink);font-weight:600;font-size:15px;text-decoration:none;
-  padding:9px 20px;border-radius:999px;border:1.5px solid transparent;white-space:nowrap}
-.pill:hover{border-color:var(--coral)}
-.pill.cta{background:var(--coral);color:#fff}
-.pill.cta:hover{border-color:#fff}
-@media (min-width:860px){.pills{display:flex}}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--coral);color:var(--white);text-decoration:none;font:700 18px/1.2 var(--body);padding:17px 30px;border:0;border-radius:999px;cursor:pointer;transition:background .2s,transform .2s}
+.btn:hover{background:var(--ink);color:var(--white);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--white)}
+.btn[aria-disabled="true"]{background:var(--line);color:var(--grey);cursor:not-allowed;transform:none}
+.btn svg{width:18px;height:18px}
+.linkbtn{background:none;border:0;padding:10px 4px;font:600 16px var(--body);color:var(--coral);text-decoration:underline;cursor:pointer}
+.linkbtn:hover{color:var(--ink)}
 
-/* frames */
-.frame{--fp:clamp(26px,4vw,46px);position:relative;border:1.5px solid var(--coral);border-radius:28px;
-  padding:var(--fp) clamp(18px,4vw,56px) clamp(34px,5vw,64px);margin-block:clamp(54px,8vw,96px) 0}
-.frame>.ttl{display:table;max-width:calc(100% + 8px);margin:calc(-1 * var(--fp) - .5em) auto var(--fp);
-  background:var(--bg);padding:0 .22em;position:relative;text-align:center;
-  font-size:clamp(40px,9vw,112px);line-height:1;font-weight:500;letter-spacing:-.035em;text-wrap:balance}
-.frame>.ttl.sm{font-size:clamp(30px,6vw,68px)}
-.frame>.lbl{display:table;margin:calc(-1 * var(--fp) - .75em) auto var(--fp);background:var(--bg);padding:0 14px;
-  color:var(--coral);font-size:clamp(15px,2vw,19px);font-weight:500;text-align:center;position:relative}
-.center{text-align:center}
-.stack{display:grid;gap:16px;justify-items:center}
-.narrow{max-width:36em;margin-inline:auto}
+/* top bar */
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding-top:26px;position:relative}
+.mark{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:21px;letter-spacing:-.02em}
+.mark span{font-weight:500;color:var(--grey)}
+.mark svg{width:26px;height:26px}
 
-/* stickers */
-.tag{display:table;max-width:100%;padding:8px 20px;font-weight:500;font-size:clamp(18px,2.3vw,26px);line-height:1.25;text-align:center;text-decoration:none}
-.t-red{background:var(--coral);color:#fff}
-.t-pale{background:var(--pale);color:var(--coral)}
-.t-teal{background:var(--teal);color:#fff;transform:rotate(-2.2deg);padding:12px 40px;font-weight:600}
-.tag.sm{font-size:16px;padding:6px 16px}
-a.t-teal{transition:transform .2s ease}
-a.t-teal:hover{transform:rotate(0) scale(1.04)}
-.box{background:var(--pale);color:var(--ink);padding:14px 20px;font-size:17px;line-height:1.45;text-align:center;max-width:100%}
-.box.l{text-align:left}
-.box b{color:var(--coral);font-weight:600}
-.gap{margin-top:14px}
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--warm)}
+.hero-in{display:flex;flex-wrap:wrap;align-items:center;gap:32px 48px;padding-top:56px;padding-bottom:56px;position:relative}
+.hero-copy{flex:1 1 440px;min-width:0;max-width:760px}
+.x{font-style:normal;color:var(--coral)}
+.hero h1{font-size:clamp(42px,6.4vw,74px);font-weight:800;line-height:.98;letter-spacing:-.035em;margin:18px 0 22px}
+.hero h1 em{font-style:normal;color:var(--coral)}
+.hero-art{flex:1 1 320px;min-width:0;max-width:420px;margin:0 auto}
+.hero-art svg{width:100%;height:auto}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.chip{display:inline-flex;align-items:center;gap:8px;background:var(--tint);color:var(--ink);font-weight:600;font-size:15px;padding:8px 16px;border-radius:999px}
+.chip svg{width:16px;height:16px;color:var(--coral)}
 
-/* grids */
-.grid{display:grid;gap:clamp(24px,3vw,40px)}
-.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
-.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
-.grid>*{min-width:0}
-.col-head{margin-bottom:14px}
-.cell{display:grid;gap:14px;justify-items:center;align-content:start}
+/* letter */
+.letter{max-width:720px;margin:0 auto;padding:40px 24px 96px}
+.letter p{font-size:19px;line-height:1.8;font-weight:400;color:#3b3b3b;margin-bottom:24px}
+.letter .hi{font-size:22px;font-weight:600;font-family:var(--display);color:var(--ink)}
+.say{background:var(--coral);color:var(--white);border-radius:var(--r);padding:30px 34px;margin:34px 0;font-family:var(--display);font-weight:600;font-size:clamp(24px,3.2vw,30px);line-height:1.2;letter-spacing:-.01em}
+.say em{font-style:italic}
+.say small{display:block;font-family:var(--body);font-weight:500;font-size:15px;letter-spacing:0;opacity:.9;margin-top:10px}
+.bet{background:var(--ink);color:var(--white);border-radius:var(--r);padding:32px 34px;margin:34px 0}
+.bet .eyebrow{color:var(--coral-light);display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.bet .eyebrow svg{width:18px;height:18px}
+.bet p{font-size:19px;margin:0;color:#F1ECE9}
+.letter p.ask{font-weight:500;color:var(--ink)}
+.choices{display:flex;flex-wrap:wrap;gap:14px;margin:34px 0 16px}
+.small{font-size:16px;color:var(--grey)}
+.sign{border-top:1px solid var(--line);padding-top:24px;margin-top:48px}
+.sign p{font-size:18px;margin:0}
+.sign b{display:block;font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.02em}
 
-/* intro columns */
-.intro{margin-top:clamp(28px,4vw,48px);font-size:clamp(19px,2.2vw,24px);line-height:1.4}
-.big{font-size:clamp(30px,5.2vw,60px);line-height:1.08;font-weight:500;letter-spacing:-.03em;text-wrap:balance}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.box{background:var(--white);border:1.5px solid var(--line);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;gap:12px;transition:transform .25s,border-color .25s,box-shadow .25s}
+.box:hover{transform:translateY(-4px);border-color:var(--coral);box-shadow:0 14px 30px -18px rgba(214,60,43,.45)}
+.box.tint{background:var(--tint);border-color:var(--tint)}
+.box h3{font-size:24px;font-weight:800;line-height:1.1;letter-spacing:-.02em}
+.box p{font-size:17px;color:#2b2b2b}
+.ico{width:52px;height:52px;border-radius:14px;background:var(--tint);display:grid;place-items:center;color:var(--coral)}
+.box.tint .ico{background:var(--white)}
+.ico svg{width:26px;height:26px}
+.stat{font-family:var(--display);font-weight:800;font-size:34px;letter-spacing:-.03em;line-height:1}
+.stat small{font-family:var(--body);font-weight:600;font-size:15px;letter-spacing:0;color:var(--grey);margin-left:4px}
+
+.not{background:var(--ink);color:var(--white);border-radius:var(--r);padding:34px clamp(24px,5vw,44px);display:flex;flex-wrap:wrap;align-items:center;gap:14px 32px}
+.not .eyebrow{color:var(--coral-light);display:flex;align-items:center;gap:10px}
+.not .eyebrow svg{width:20px;height:20px}
+.not p{font-family:var(--display);font-weight:700;font-size:clamp(22px,3vw,30px);line-height:1.15;letter-spacing:-.02em;flex:1 1 320px}
 
 /* timeline */
-.tl{display:grid;gap:12px;justify-items:center}
-.tl .step{display:grid;gap:8px;justify-items:center;margin-bottom:14px;max-width:100%}
-.tl .box{max-width:42em}
+.tl{position:relative;margin:0;padding:0;list-style:none;max-width:760px}
+.tl::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.tl li{position:relative;display:flex;flex-wrap:wrap;gap:2px 28px;padding:0 0 28px 44px}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:3px;top:6px;width:18px;height:18px;border-radius:50%;background:var(--white);border:3px solid var(--coral)}
+.tl li.now::before{background:var(--coral);box-shadow:0 0 0 6px rgba(214,60,43,.18)}
+.tl li.end::before{border-color:var(--teal);background:var(--teal)}
+.tl .d{flex:0 0 210px;font-family:var(--display);font-weight:800;font-size:23px;letter-spacing:-.02em;color:var(--ink)}
+.tl .d small{font-family:var(--body);font-weight:600;font-size:14px;letter-spacing:0;color:var(--grey)}
+.tl p{flex:1 1 260px;min-width:0;font-size:18px;color:#2b2b2b;padding-top:3px}
 
-/* hosts */
-.host{display:grid;gap:12px;justify-items:center;text-align:center}
-.avatar{width:min(210px,60%);aspect-ratio:1;border-radius:50%;background:#2A2A2A;display:grid;place-items:center;
-  font-size:76px;font-weight:500;color:var(--coral);letter-spacing:-.04em;border:1.5px solid #3A3A3A}
+/* checklist */
+.audit{background:var(--tint);border-radius:28px;padding:clamp(28px,5vw,56px);display:flex;flex-wrap:wrap;gap:32px 56px;align-items:flex-start}
+.audit>.t{flex:1 1 260px;min-width:0;display:flex;flex-direction:column;gap:12px}
+.audit>.c{flex:3 1 460px;min-width:0;max-width:720px}
+.chk{display:flex;gap:16px;align-items:flex-start;background:var(--white);border:1.5px solid transparent;border-radius:14px;padding:16px 18px;margin-bottom:10px;cursor:pointer;transition:border-color .2s,transform .2s}
+.chk:hover{transform:translateY(-1px)}
+.chk:has(input:checked){border-color:var(--coral)}
+.chk input{appearance:none;-webkit-appearance:none;flex:none;width:26px;height:26px;margin:2px 0 0;border:2px solid var(--ink);border-radius:8px;background:var(--white);cursor:pointer;position:relative}
+.chk input:checked{background:var(--coral);border-color:var(--coral)}
+.chk input:checked::after{content:"";position:absolute;left:8px;top:3px;width:6px;height:12px;border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg)}
+.chk span{font-size:18px;font-weight:500}
+.prog{display:flex;gap:6px;margin:22px 0 8px}
+.prog i{flex:1;height:8px;border-radius:999px;background:rgba(20,20,20,.12);transition:background .25s}
+.prog i.on{background:var(--coral)}
+.prog.done i.on{background:var(--teal)}
+.cta{padding-top:8px}
+.cta .btn{margin-top:10px}
+.cta .small{margin-top:12px}
 
-footer{padding-block:48px 56px;text-align:center;color:var(--muted);font-size:15px}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}a.t-teal{transition:none}}
+/* form steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+
+footer{padding:96px 0 44px;font-size:14px;color:var(--grey)}
+
+/* motion */
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .js .rv{opacity:1;transform:none;transition:none}
+  .box,.btn,.chk{transition:none}
+}
 </style>
+</head>
+<body>
 
-<nav class="nav" aria-label="Main">
-  <div class="wrap">
-    <a class="logo" href="#top">Co.lab<b>x</b></a>
-    <div class="pills">
-      <a class="pill" href="#who">Who we are</a>
-      <a class="pill" href="#fit">Is this for you</a>
-      <a class="pill" href="#build">What you'll build</a>
-      <a class="pill" href="#plan">Game plan</a>
-      <a class="pill" href="#hosts">Hosts</a>
+<!-- Reusable icons -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-loop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13l-3-3M20 15H7l3 3"/></symbol>
+    <symbol id="i-triad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5.5" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M11 8l-4.8 7.6M13 8l4.8 7.6M7.5 18h9"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2.5"/><path d="M4 10h16M9 3v4M15 3v4"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4M5 4h12l-2.5 4L17 12H5"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1-4L16.5 4.5l3 3L8 19z M14 7l3 3"/></symbol>
+    <symbol id="i-bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 20v-8M12 20V5M19 20v-5"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></symbol>
+    <symbol id="i-people" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8.5" r="3"/><circle cx="17" cy="9.5" r="2.4"/><path d="M3 19c0-3.2 2.7-5.2 6-5.2s6 2 6 5.2M15.5 14.2c3 0 5.5 1.5 5.5 4.8"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.4A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></symbol>
+    <symbol id="i-coin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 8h6M9 11h6M9 8c4.2 0 4.2 5.2 0 5.2l5 3.8"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M3 7h18v3H3zM12 7v13M12 7c-2.5 0-4-1-4-2.5S10 2.5 12 7zM12 7c2.5 0 4-1 4-2.5S14 2.5 12 7z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M5.6 18.4L18.4 5.6"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============ VIEW 1: THE LETTER ============ -->
+<div id="view-letter" data-view="letter">
+  <div class="hero">
+    <header class="wrap bar">
+      <div class="mark">
+        <div>Co.lab<i class="x">x</i> <span><i class="x">×</i> The Coach Collective</span></div>
+      </div>
+    </header>
+
+    <div class="wrap hero-in">
+      <div class="hero-copy rv">
+        <div class="eyebrow">An invitation</div>
+        <h1>An invitation to practitioners of <em>transformation</em></h1>
+      </div>
     </div>
-    <a class="pill cta" href="#apply">Share your interest</a>
   </div>
-</nav>
 
-<main id="top" class="wrap">
+  <main class="letter">
+    <p class="hi rv">Dear practitioner,</p>
+    <p class="rv">You can hold a silence for forty seconds in a conference room and make a founder squirm into honesty. You have asked "and what's really going on here?" more times than you can count.</p>
+    <p class="rv">And yet, your own pricing is "let's see." Your bio has four nouns and a slash. Your pipeline is a mix of hope and the one client who keeps referring you. The cobbler's children, as they say, have excellent shoes for everyone else.</p>
 
-  <!-- Hero -->
-  <section class="frame" style="margin-top:clamp(36px,5vw,64px)">
-    <p class="lbl">Co.labx community · Coach Collective</p>
-    <p class="center" style="font-size:clamp(20px,3vw,32px);font-weight:500;letter-spacing:-.01em;margin-bottom:10px">You've been holding the room.</p>
-    <h1 class="alt center" style="font-size:clamp(46px,11vw,150px);line-height:.95;font-weight:500;letter-spacing:-.045em;text-wrap:balance">Who's holding yours?</h1>
-    <div class="stack" style="margin-top:clamp(28px,4vw,48px)">
-      <span class="tag t-red">Applications close 1 Nov</span>
-      <span class="tag t-pale">10 practitioners · 4 months · Free programme</span>
-      <a class="tag t-teal" href="#apply">Share your interest</a>
+    <div class="say rv"><em>We say this with love. We are the cobblers too.</em></div>
+
+    <p class="rv">For six years, Co.lab<i class="x">x</i> has used the lessons of sport to help purpose-driven organisations grow. Looking back, we were never really a small team. At any moment, 15-20 people stood beside us, and the best work happened when practitioners of different crafts stood on the same field.</p>
+    <p class="rv">So now we are doing it on purpose. By 2030, we want to be a trusted transformation partner to organisations that put purpose, people, planet and profit together, and we can't get there alone.</p>
+
+    <div class="bet rv">
+      <div class="eyebrow"><svg><use href="#i-spark"/></svg>An unusual bet we're making</div>
+      <p>We are opening our playbooks and our client work to a circle of practitioners, including people who might otherwise be our competition. Sharing client relationships isn't our default, and we know it isn't yours. We'd rather begin with trust than ask you to earn it.</p>
     </div>
-  </section>
 
-  <div class="grid g2 intro">
-    <p>You know the craft. Now you're ready to make it your whole practice, and you don't have to build it alone.</p>
-    <p>Join <span class="hl">nine other practitioners</span> for four months with a team that has your back. <span class="hl">Peer practice</span>, <span class="hl">open playbooks</span>, <span class="hl">paid co-facilitation</span> and <span class="hl">business mentorship</span>.</p>
+    <p class="rv">Whether you are stepping into independent practice or years into it and tired of sharpening your craft alone, this is a circle, not a class. We begin in December, with live work and peer practice through March, and the circle is meant to outlast the dates.</p>
+    <p class="ask rv">If you have ever made room for others to see what they couldn't see before, we'd love to make some room for you.</p>
+
+    <div class="choices rv">
+      <button class="btn ghost" type="button" data-go="more">I'm curious, tell me more</button>
+      <button class="btn" type="button" data-go="check">Sign me in already <svg><use href="#i-arrow"/></svg></button>
+    </div>
+    <p class="small rv">Not sure yet? Keep reading, we won't take it personally.</p>
+
+    <div class="sign rv">
+      <p>With warmth,</p>
+      <b>Arhan, Shruti, Jayasudha, Vimal, Saahil and Monica</b>
+      <p class="small">Co.lab<i class="x">x</i></p>
+    </div>
+  </main>
+</div>
+
+<!-- ============ VIEW 2 + 3: DETAILS AND CHECKLIST ============ -->
+<div id="view-rest" hidden>
+  <header class="wrap bar">
+    <div class="mark">
+      <div>Co.lab<i class="x">x</i> <span><i class="x">×</i> The Coach Collective</span></div>
+    </div>
+    <button class="linkbtn" type="button" data-go="letter">Back to the letter</button>
+  </header>
+
+  <!-- details (view: more) -->
+  <div data-view="more">
+    <section class="wrap" style="padding-top:64px">
+      <div class="rv" style="max-width:760px">
+        <div class="eyebrow" style="margin-bottom:16px">The details</div>
+        <h1 style="font-size:clamp(40px,6.4vw,68px);font-weight:800;line-height:1;letter-spacing:-.035em;margin-bottom:18px">Welcome to the circle <span style="color:var(--coral)">(almost).</span></h1>
+        <p class="lede">Here is what you'd be joining, what we ask of you, and how we get to know each other.</p>
+      </div>
+    </section>
+
+    <section class="wrap sec" style="padding-top:64px">
+      <div class="sec-head rv"><h2 class="h2">What this is</h2></div>
+      <div class="grid">
+        <div class="box tint rv"><div class="ico"><svg><use href="#i-loop"/></svg></div><h3>A circle that works</h3><p>Practitioners who give, grow and refer each other, and increasingly work together without us in the room.</p></div>
+        <div class="box tint rv"><div class="ico"><svg><use href="#i-triad"/></svg></div><h3>Mentors alongside you</h3><p>Experienced mentors who bring specialist depth, and who become thinking partners as you build.</p></div>
+        <div class="box tint rv"><div class="ico"><svg><use href="#i-cal"/></svg></div><h3>December to March</h3><p>Live client work, paid co-facilitation opportunities and peer practice, alongside a breakthrough of your own choosing.</p></div>
+        <div class="box tint rv"><div class="ico"><svg><use href="#i-flag"/></svg></div><h3>Beyond March</h3><p>A long-term relationship. We intend to build towards 2030 with the people who join.</p></div>
+      </div>
+    </section>
+
+    <section class="wrap sec">
+      <div class="sec-head rv"><h2 class="h2">What you'll build</h2></div>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+        <div class="box rv"><div class="ico"><svg><use href="#i-pen"/></svg></div><div class="eyebrow">Craft</div><p>Our playbooks, your peers' approaches and honest feedback.</p></div>
+        <div class="box rv"><div class="ico"><svg><use href="#i-bars"/></svg></div><div class="eyebrow">Business</div><p>Skills for building a business around the work you believe in.</p></div>
+        <div class="box rv"><div class="ico"><svg><use href="#i-spark"/></svg></div><div class="eyebrow">Breakthrough</div><p>Something of your own, of your choosing, that moves your practice forward. Your practice and clients stay yours.</p></div>
+        <div class="box rv"><div class="ico"><svg><use href="#i-people"/></svg></div><div class="eyebrow">Community</div><p>Peers who challenge, refer and back you.</p></div>
+      </div>
+    </section>
+
+    <section class="wrap" style="padding-top:40px">
+      <div class="not rv">
+        <div class="eyebrow"><svg><use href="#i-pause"/></svg>What this is not</div>
+        <p>A class, a stop-gap, or a way to be handed clients.</p>
+      </div>
+    </section>
+
+    <section class="wrap sec">
+      <div class="sec-head rv"><h2 class="h2">What we're each investing</h2></div>
+      <div class="grid">
+        <div class="box rv"><div class="ico"><svg><use href="#i-clock"/></svg></div><div class="eyebrow">You</div><div class="stat">3-4<small>hours a week</small></div><p>Plus 3-4 more if you co-facilitate. The 2.5-day in-person gathering costs about ₹10,000 per person on actuals (facilities, lodging, food). Travel is yours.</p></div>
+        <div class="box rv"><div class="ico"><svg><use href="#i-heart"/></svg></div><div class="eyebrow">Us</div><div class="stat">Open<small>playbooks and client work</small></div><p>Our experience, time and money. We take no margin on the in-person gathering.</p></div>
+        <div class="box rv"><div class="ico"><svg><use href="#i-coin"/></svg></div><div class="eyebrow">Paid work</div><div class="stat">₹10-20k<small>per day</small></div><p>For co-facilitation, with travel and logistics covered. It isn't guaranteed.</p></div>
+      </div>
+    </section>
+
+    <section class="wrap sec">
+      <div class="sec-head rv"><h2 class="h2">Key dates</h2></div>
+      <ol class="tl rv">
+        <li class="now"><div class="d">23 Oct - 1 Nov</div><p>Interest form open</p></li>
+        <li><div class="d">2 - 11 Nov</div><p>Group session and conversation with two of us</p></li>
+        <li><div class="d">14 Nov</div><p>Decisions</p></li>
+        <li><div class="d">3 - 5 Dec <small>(tentative)</small></div><p>First in-person gathering, 2.5 days</p></li>
+        <li><div class="d">Week of 14 Dec</div><p>First online huddle</p></li>
+        <li class="end"><div class="d">Dec - Mar</div><p>Live projects and peer practice, alongside your own breakthrough</p></li>
+      </ol>
+      <p class="lede rv" style="margin-top:40px">How it flows: a short honest check, the interest form, a group session and a conversation with two of us, and then we decide together.</p>
+    </section>
   </div>
 
-  <!-- The moment -->
-  <section class="frame">
-    <h2 class="ttl alt">You know the moment</h2>
-    <div class="stack narrow center" style="gap:22px">
-      <p class="big">A founder sees what they couldn't see before.</p>
-      <p style="font-size:clamp(19px,2.2vw,24px)">A team finally has the conversation it's been avoiding. <span class="hl">You make room for that.</span></p>
-      <p class="muted" style="color:var(--muted)">You already have what can't be taught in a weekend: presence, the instinct for the question that opens things up, the steadiness to stay when it gets uncomfortable.</p>
-    </div>
-  </section>
-
-  <div class="grid g2 intro" style="gap:clamp(24px,3vw,40px)">
-    <p>And yet, somewhere between doing the work and building a life around it, things get complicated. <span class="hl">Finding clients. Pricing your work.</span> And finding people who understand why any of this matters so much to you.</p>
-    <p>This is your life's work. Now you're ready to make it your whole practice. We know it's a different kind of journey, and you don't have to make it alone.</p>
-  </div>
-  <p class="big center" style="margin-top:clamp(36px,5vw,64px);max-width:16ch;margin-inline:auto">Every good player needs a <span class="r">team</span> around them.</p>
-
-  <!-- Who we are -->
-  <section class="frame" id="who">
-    <h2 class="ttl alt">Who we are</h2>
-    <div class="grid g2" style="align-items:start">
-      <div class="cell">
-        <span class="tag t-red">An unusual bet</span>
-        <p class="box">We know this work needs more people who can hold complexity and work with the human side of change. So we're investing in making our competition better.</p>
+  <!-- checklist (views: more + check) -->
+  <section class="wrap sec" id="check" data-view="more check" style="padding-top:72px">
+    <div class="audit rv">
+      <div class="t">
+        <div class="eyebrow">Step one</div>
+        <h2 class="h2" style="font-size:clamp(28px,3.6vw,38px)">A two-minute honest check</h2>
+        <p class="small" style="font-size:17px">Tick what's true for you.</p>
+        <button class="linkbtn" type="button" data-go="more" data-only="check" style="text-align:left;align-self:flex-start">Want the details first? Tell me more</button>
       </div>
-      <div class="cell">
-        <span class="tag t-pale">200+ teams · 6 years</span>
-        <p class="box">Co.labx is a transformation practice. Over the last six years, we've worked with 200+ teams, using the lessons of sport to help purpose-driven organisations grow their people, their impact and their business. We'd like to open our playbooks and client work to a small circle of practitioners.</p>
+      <div class="c">
+        <form id="audit" onsubmit="return false">
+          <label class="chk"><input type="checkbox"><span>I have 3+ years of experience coaching, facilitating or bringing people together to create change.</span></label>
+          <label class="chk"><input type="checkbox"><span>I'm building my own practice, or about to, and I'm curious to keep learning.</span></label>
+          <label class="chk"><input type="checkbox"><span>I'll build my own practice rather than expect to be handed clients.</span></label>
+          <label class="chk"><input type="checkbox"><span>I'm here to give feedback and contribute, not only to grow my network.</span></label>
+          <label class="chk"><input type="checkbox"><span>I can meet the time and place this asks of me, including the in-person gathering in December.</span></label>
+        </form>
+        <div class="prog" id="prog" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="cta">
+          <p class="small" id="status" role="status" aria-live="polite">0 of 5 ticked. The form unlocks when all five are true for you.</p>
+          <a id="go-form" class="btn" href="#" target="_blank" rel="noopener" aria-disabled="true">Continue to the interest form <svg><use href="#i-arrow"/></svg></a>
+          <p class="small">Not all five? This may not be your season, and that's useful to know.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Is this for you -->
-  <section class="frame" id="fit">
-    <h2 class="ttl alt">Is this for you?</h2>
-    <p class="center" style="margin-bottom:26px;font-size:clamp(19px,2.2vw,24px)">This is an invitation for you if…</p>
-    <div class="stack">
-      <p class="tag t-red">You've already decided this matters. We see you.</p>
-      <p class="tag t-pale">You're about to go full-time on your own, or just have.</p>
-      <p class="tag t-red" style="max-width:34em">You have 3+ years of experience as a coach, facilitator, business coach, sports coach or systems practitioner, inside organisations or outside them.</p>
-      <p class="tag t-pale">You take the work seriously and yourself a little less so.</p>
-    </div>
-    <p class="center narrow" style="margin-top:30px;color:var(--muted)">You don't need everything figured out. Bring your experience, your questions, and the thing you've been wanting to try. We'll bring ours.</p>
-  </section>
-
-  <!-- The Collective -->
-  <section class="frame">
-    <h2 class="ttl alt">The Collective</h2>
-    <div class="stack center" style="gap:22px">
-      <p class="big" style="max-width:18ch">Ten practitioners. Four months.</p>
-      <p style="font-size:clamp(19px,2.2vw,24px)">A <span class="hl">regenerative community</span> where everyone gives and everyone grows.</p>
-      <div class="narrow" style="display:grid;gap:14px">
-        <p class="box">We're not selecting you. We're inviting you, and you decide whether you're ready to invest your time, presence and resources. Our criteria are open, so you can judge your own fit before you apply.</p>
-        <p class="box">Think of a community, not a class. A boardroom facilitator, a business coach and a sports coach each read the same moment differently, and that mix is the point.</p>
-      </div>
-      <div class="stack" style="gap:10px;margin-top:8px">
-        <span class="tag t-red sm">Boardroom facilitator</span><span class="tag t-pale sm">Business coach</span><span class="tag t-teal sm" style="padding:8px 22px">Sports coach</span>
-      </div>
+  <section class="wrap sec" data-view="more check" style="padding-top:72px">
+    <div class="sec-head rv"><h2 class="h2" style="font-size:clamp(28px,3.6vw,38px)">What the form involves</h2></div>
+    <div class="steps">
+      <div class="box rv"><div class="ico"><svg><use href="#i-clock"/></svg></div><h3>15-20 minutes</h3><p>Short, honest and designed to help you get clear on what you want to build.</p></div>
+      <div class="box rv"><div class="ico"><svg><use href="#i-spark"/></svg></div><h3>A reflection that's yours</h3><p>A Zone of Genius reflection you keep, whether or not you join.</p></div>
+      <div class="box rv"><div class="ico"><svg><use href="#i-people"/></svg></div><h3>One optional step</h3><p>Ask someone who knows your work to share their view.</p></div>
+      <div class="box rv"><div class="ico"><svg><use href="#i-heart"/></svg></div><h3>A personal note</h3><p>If it's not this season, you'll get a personal note, not a form rejection.</p></div>
     </div>
   </section>
 
-  <!-- What you'll build -->
-  <section class="frame" id="build">
-    <h2 class="ttl alt sm">What you'll build</h2>
-    <p class="center narrow" style="margin-bottom:34px;font-size:clamp(19px,2.2vw,24px)">Your ambitions will be different. We want to make room for that.</p>
-    <div class="grid g2" style="align-items:start">
-      <div class="cell"><span class="tag t-red">Hone your craft</span><p class="box">Learn from our playbooks and your peers', and turn what you know into frameworks that are distinctly yours.</p></div>
-      <div class="cell"><span class="tag t-red">Run your business</span><p class="box">Your niche, offer, pricing and next clients, with business mentorship and paid co-facilitation on live engagements.</p></div>
-      <div class="cell"><span class="tag t-red">Your breakthrough, yours</span><p class="box">A first client, a new offering, a practice that finally feels sustainable. You choose it. Your practice and your clients stay yours.</p></div>
-      <div class="cell"><span class="tag t-red">A community to get you there</span><p class="box">Nine peers who'll challenge, refer and back you, in the huddle and on the field, well beyond the four months.</p></div>
-    </div>
-  </section>
-
-  <!-- Investing -->
-  <section class="frame">
-    <h2 class="ttl alt sm">What we're each investing</h2>
-    <div class="grid g2" style="align-items:start">
-      <div class="cell">
-        <span class="tag t-red">You're investing</span>
-        <p class="box"><b>Your time.</b> 3–4 hours a week for the community, plus 3–4 more if you co-facilitate on a client engagement.</p>
-        <p class="box"><b>Your craft.</b> Your experience, your questions, and the thing you've been wanting to try.</p>
-        <p class="box"><b>Your money.</b> The first in-person workshop is paid on actuals for facilities, lodging and food, about ₹10,000 per person. Travel is yours.</p>
-      </div>
-      <div class="cell">
-        <span class="tag t-teal" style="transform:rotate(1.6deg)">We're investing</span>
-        <p class="box"><b>Our experience, knowledge and craft.</b> Our playbooks and client work, opened to the circle.</p>
-        <p class="box"><b>Our time and money.</b> The programme itself is free, and we take no margin on the workshop.</p>
-      </div>
-    </div>
-    <div class="stack" style="margin-top:34px">
-      <span class="tag t-pale">Paid work</span>
-      <p class="box" style="max-width:36em">Around <b>₹10,000–20,000 per day</b> for co-facilitation, with travel and logistics covered. It isn't guaranteed.</p>
-    </div>
-  </section>
-
-  <!-- Win-win-win -->
-  <section class="frame">
-    <h2 class="ttl alt sm">The win-win-win</h2>
-    <div class="stack narrow center" style="gap:22px">
-      <p class="big">When one of us grows, we all do.</p>
-      <p class="box">You build a practice that sustains you. The organisations you serve get stronger. The ecosystem grows, and that includes us. We'll be honest about what we hope to gain: better ways of serving our clients, trusted collaborators, and a stronger field.</p>
-    </div>
-  </section>
-
-  <!-- Game plan -->
-  <section class="frame" id="plan">
-    <h2 class="ttl alt">The game plan</h2>
-    <p class="center narrow" style="margin-bottom:34px;font-size:clamp(19px,2.2vw,24px)">We don't have the whole thing designed, and that's intentional. The people who join will help shape what comes next.</p>
-    <div class="tl">
-      <div class="step"><span class="tag t-red">23 Oct – 1 Nov</span><p class="box"><b>Application window.</b> Applications open on 23 Oct and close on 1 Nov.</p></div>
-      <div class="step"><span class="tag t-red">2 – 11 Nov</span><p class="box">We read your application with care, and then we talk. Conversations happen in small groups, so you meet your potential peers and we work out together whether this is the right season for you.</p></div>
-      <div class="step"><span class="tag t-red">14 Nov</span><p class="box">The cohort is announced, with at least two weeks to plan before Bangalore.</p></div>
-      <div class="step"><span class="tag t-red">3 – 5 Dec</span><p class="box">Two and a half days together in Bangalore: craft, practice, community and play.</p><span class="tag t-teal sm">Tentative</span></div>
-      <div class="step"><span class="tag t-red">Week of 14 Dec</span><p class="box">First online huddle.</p></div>
-      <div class="step" style="margin-bottom:0"><span class="tag t-red">Dec – Mar</span><p class="box">Live projects and peer practice, alongside your own breakthrough.</p></div>
-    </div>
-  </section>
-
-  <!-- Applying -->
-  <section class="frame">
-    <h2 class="ttl alt sm">What applying looks like</h2>
-    <div class="stack narrow center" style="gap:20px">
-      <p class="big" style="font-size:clamp(26px,4.2vw,46px)">Think of it as the first conversation, <span class="r">not a test.</span></p>
-      <p class="box">The form takes 20–30 minutes and is designed to help you get clear on what you want to build, whether or not you join.</p>
-      <p class="box">After applications close on 1 Nov, we'll invite you into a conversation. It isn't an interview. It's a chance to meet others who may be in the room, ask us your questions, and decide together whether this is right for you.</p>
-      <span class="tag t-pale sm">Our criteria are open and listed above</span>
-    </div>
-  </section>
-
-  <!-- Hosts -->
-  <section class="frame" id="hosts">
-    <h2 class="ttl alt sm">Who's holding this with you</h2>
-    <p class="center narrow" style="margin-bottom:38px;font-size:clamp(19px,2.2vw,24px)">We'll be on the field with you, not coaching from the sidelines.</p>
-    <div class="grid g3" style="gap:44px 32px;align-items:start">
-      <div class="host"><div class="avatar" aria-hidden="true">A</div><span class="tag t-red">Arhan</span><p class="box">On a quest to design new organisation models for the 21st century, helping organisations shift from pyramids to networks and building long-term client relationships.</p></div>
-      <div class="host"><div class="avatar" aria-hidden="true">S</div><span class="tag t-red">Shruti</span><p class="box">Co-founder of Co.labx.</p></div>
-      <div class="host"><div class="avatar" aria-hidden="true">J</div><span class="tag t-red">Jayasudha</span><p class="box">Bringing a learner-experience and systems lens to facilitation, designing spaces that help people reflect deeply, shift their practice, and create meaningful change.</p></div>
-      <div class="host"><div class="avatar" aria-hidden="true">V</div><span class="tag t-red">Vimal</span><p class="box">A mechanical engineer who found his calling in teaching. He has helped 10,000+ young people take on public problems, and now partners with CXOs to grow their organisations.</p></div>
-      <div class="host"><div class="avatar" aria-hidden="true">S</div><span class="tag t-red">Saahil</span><p class="box">Co-founder of Co.labx.</p></div>
-      <div class="host"><div class="avatar" aria-hidden="true">M</div><span class="tag t-red">Monica</span><p class="box">Part of the Co.labx team.</p></div>
-    </div>
-  </section>
-
-  <!-- Closing -->
-  <section class="frame" id="apply" style="margin-bottom:clamp(40px,6vw,72px)">
-    <p class="lbl">Applications open 23 Oct · close 1 Nov</p>
-    <div class="stack center" style="gap:24px">
-      <h2 class="big alt" style="max-width:15ch;letter-spacing:-.04em">Make some space for you.</h2>
-      <p class="narrow" style="font-size:clamp(19px,2.2vw,24px)">You've held space for others. We'd love to make some space for you.</p>
-      <p class="box narrow">Tell us about the work that brings you alive, where you are in your journey, and what you'd love to build. You don't need the perfect answer. A good place to begin is with what you're curious about.</p>
-      <a class="tag t-teal" id="apply-link" href="#apply" style="margin-top:12px;font-size:clamp(20px,2.6vw,28px)">Share your interest</a>
-    </div>
-  </section>
-</main>
-
-<footer>Co.labx × Coach Collective</footer>
+  <footer class="wrap">Zone of Genius adapted from the Conscious Leadership Group. Co.lab<i class="x">x</i> <i class="x">×</i> The Coach Collective.</footer>
+</div>
 
 <script>
-/* Alternate white and coral letters in titles; the plain text stays readable without script. */
-document.querySelectorAll('.alt').forEach(function(h){
-  var t=h.textContent.trim(),i=0;
-  h.setAttribute('aria-label',t);
-  h.innerHTML=Array.from(t).map(function(c){
-    if(c===' '||c==='\n')return ' ';
-    var cls=(i++%2)?' class="r"':'';
-    return '<span aria-hidden="true"'+cls+'>'+c+'</span>';
-  }).join('');
-});
-</script>
+/* ------------------------------------------------------------------
+   SET THIS: paste your Google Form link between the quotes.
+------------------------------------------------------------------ */
+var FORM_URL = "";
 
-</body></html>
+(function () {
+  var letter = document.getElementById('view-letter');
+  var rest = document.getElementById('view-rest');
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('#audit input'));
+  var segs = Array.prototype.slice.call(document.querySelectorAll('#prog i'));
+  var prog = document.getElementById('prog');
+  var goForm = document.getElementById('go-form');
+  var status = document.getElementById('status');
+  var views = ['letter', 'more', 'check'];
+
+  /* gentle reveal on scroll */
+  var io = null;
+  if ('IntersectionObserver' in window) {
+    io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12 });
+  }
+  function watch() {
+    Array.prototype.forEach.call(document.querySelectorAll('.rv:not(.in)'), function (el) {
+      if (io) io.observe(el); else el.classList.add('in');
+    });
+  }
+
+  function setView(name, push) {
+    if (views.indexOf(name) < 0) name = 'letter';
+    var isLetter = name === 'letter';
+    letter.hidden = !isLetter;
+    rest.hidden = isLetter;
+    if (!isLetter) {
+      Array.prototype.forEach.call(rest.querySelectorAll('[data-view]'), function (el) {
+        el.hidden = el.getAttribute('data-view').split(' ').indexOf(name) < 0;
+      });
+    }
+    if (push !== false && location.hash !== '#' + name) {
+      try { history.pushState(null, '', '#' + name); } catch (e) { location.hash = name; }
+    }
+    window.scrollTo(0, 0);
+    watch();
+  }
+
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest ? e.target.closest('[data-go]') : null;
+    if (!t) return;
+    e.preventDefault();
+    setView(t.getAttribute('data-go'));
+  });
+
+  window.addEventListener('popstate', function () {
+    setView(location.hash.replace('#', ''), false);
+  });
+
+  function update() {
+    var n = boxes.filter(function (b) { return b.checked; }).length;
+    var all = n === boxes.length;
+    segs.forEach(function (s, i) { s.className = i < n ? 'on' : ''; });
+    prog.className = 'prog' + (all ? ' done' : '');
+    goForm.setAttribute('aria-disabled', all ? 'false' : 'true');
+    if (all) {
+      goForm.removeAttribute('tabindex');
+      goForm.href = FORM_URL || '#';
+      status.textContent = 'All five ticked. The form is ready for you.';
+    } else {
+      goForm.setAttribute('tabindex', '-1');
+      goForm.href = '#';
+      status.textContent = n + ' of 5 ticked. The form unlocks when all five are true for you.';
+    }
+  }
+  goForm.addEventListener('click', function (e) {
+    if (goForm.getAttribute('aria-disabled') === 'true' || !FORM_URL) e.preventDefault();
+  });
+  boxes.forEach(function (b) { b.addEventListener('change', update); });
+  update();
+
+  setView(location.hash.replace('#', '') || 'letter', false);
+})();
+</script>
+</body>
+</html>
